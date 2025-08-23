@@ -1,0 +1,101 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Play } from 'lucide-react'
+import { slideUpVariants, staggerContainer } from '@/lib/animation'
+import heroImage from '@/assets/hero-bg.jpg'
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Parallax */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <img
+          src={heroImage}
+          alt="Islamic geometric pattern background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/60" />
+      </motion.div>
+
+      {/* Content */}
+      <motion.div
+        className="relative z-10 text-center max-w-5xl mx-auto px-6 lg:px-8"
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Kicker */}
+        <motion.p 
+          variants={slideUpVariants}
+          className="text-accent text-sm font-medium tracking-wide uppercase mb-6"
+        >
+          622 Collective
+        </motion.p>
+
+        {/* Main Headline */}
+        <motion.h1
+          variants={slideUpVariants}
+          className="text-display font-grotesk font-bold text-foreground mb-8 leading-none"
+        >
+          Celebrating Muslim Excellence.
+          <br />
+          <span className="text-accent">Building Our Future.</span>
+        </motion.h1>
+
+        {/* Subheadline */}
+        <motion.p
+          variants={slideUpVariants}
+          className="text-large text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
+        >
+          A global platform celebrating Muslim excellence, advancing ideas, and building community for generations to come.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          variants={slideUpVariants}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <Link to="/podcast" className="btn-primary group">
+            <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+            Explore the Podcast
+            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          
+          <Link to="/ummah100" className="btn-secondary group">
+            Nominate for Ummah100
+            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.6 }}
+        >
+          <motion.div
+            className="w-6 h-10 border-2 border-accent rounded-full flex justify-center"
+            animate={{ 
+              borderColor: ['hsl(var(--accent))', 'hsl(var(--accent) / 0.5)', 'hsl(var(--accent))']
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <motion.div
+              className="w-1 h-3 bg-accent rounded-full mt-2"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </section>
+  )
+}
