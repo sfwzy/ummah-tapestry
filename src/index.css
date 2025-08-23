@@ -18,8 +18,8 @@
     --popover: 220 15% 9%;
     --popover-foreground: 210 40% 98%;
     
-    /* Brand gold accent for 622 Collective */
-    --primary: 43 96% 60%;
+    /* Brand subtle blue accent for 622 Collective */
+    --primary: 212 67% 59%;
     --primary-foreground: 220 15% 7%;
     
     --secondary: 220 15% 15%;
@@ -28,7 +28,7 @@
     --muted: 220 15% 15%;
     --muted-foreground: 215 20.2% 65.1%;
     
-    --accent: 43 96% 60%;
+    --accent: 212 67% 59%;
     --accent-foreground: 220 15% 7%;
     
     --destructive: 0 84.2% 60.2%;
@@ -36,7 +36,7 @@
     
     --border: 220 15% 20%;
     --input: 220 15% 15%;
-    --ring: 43 96% 60%;
+    --ring: 212 67% 59%;
     
     --radius: 0.75rem;
     
@@ -48,10 +48,10 @@
     /* Scrollytelling specific colors */
     --chapter-bg: 220 15% 7%;
     --chapter-text: 210 40% 98%;
-    --chapter-accent: 43 96% 60%;
+    --chapter-accent: 212 67% 59%;
     
     /* Islamic geometric pattern colors */
-    --pattern-primary: 43 96% 60%;
+    --pattern-primary: 212 67% 59%;
     --pattern-secondary: 220 15% 25%;
     --pattern-tertiary: 210 40% 80%;
   }
@@ -59,21 +59,21 @@
   /* Fluid typography scale */
   h1, .text-display {
     font-size: clamp(2.5rem, 5vw, 5.5rem);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 0.9;
     letter-spacing: -0.02em;
   }
   
   h2, .text-hero {
     font-size: clamp(1.875rem, 4vw, 3.5rem);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
   
   h3, .text-large {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
   }
   

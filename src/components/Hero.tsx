@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { slideUpVariants, staggerContainer } from '@/lib/animation'
 import heroImage from '@/assets/hero-bg.jpg'
 
@@ -42,7 +42,7 @@ export function Hero() {
         {/* Main Headline */}
         <motion.h1
           variants={slideUpVariants}
-          className="text-display font-grotesk font-bold text-foreground mb-8 leading-none"
+          className="text-display font-grotesk text-foreground mb-8 leading-none"
         >
           Celebrating Muslim Excellence.
           <br />
@@ -52,24 +52,18 @@ export function Hero() {
         {/* Subheadline */}
         <motion.p
           variants={slideUpVariants}
-          className="text-large text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-large text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
         >
           A global platform celebrating Muslim excellence, advancing ideas, and building community for generations to come.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <motion.div
           variants={slideUpVariants}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex justify-center items-center"
         >
-          <Link to="/podcast" className="btn-primary group">
-            <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-            Explore the Podcast
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          
-          <Link to="/ummah100" className="btn-secondary group">
-            Nominate for Ummah100
+          <Link to="/contact" className="btn-primary group">
+            Get Involved
             <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

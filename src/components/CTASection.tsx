@@ -51,15 +51,15 @@ export function CTASection({
 
         <motion.div
           variants={slideUpVariants}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex justify-center items-center"
         >
-          <Link to={primaryCTA.href} className="btn-primary group">
+          <Link to={primaryCTA.href} className="btn-primary group inline-flex items-center">
             {primaryCTA.text}
             <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
           </Link>
 
           {secondaryCTA && (
-            <Link to={secondaryCTA.href} className="btn-secondary group">
+            <Link to={secondaryCTA.href} className="btn-secondary group inline-flex items-center ml-6">
               {secondaryCTA.text}
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
             </Link>

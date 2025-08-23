@@ -12,6 +12,8 @@ import { Footer } from '@/components/Footer'
 import sketchImage from '@/assets/sketch-innovation.jpg'
 import patternImage from '@/assets/pattern-tiles.jpg'
 import communityImage from '@/assets/community-gathering.jpg'
+import moroccanPattern from '@/assets/moroccan-pattern.jpg'
+import blueMosquePattern from '@/assets/blue-mosque-pattern.jpg'
 
 const stats = [
   { number: '03', label: 'Countries' },
@@ -26,21 +28,21 @@ const caseStudies = [
     description: 'Celebrating the top 100 Muslims shaping culture, business, and society today.',
     image: communityImage,
     href: '/work/ummah100',
-    tags: ['Recognition', 'Community', 'Excellence']
+    tags: ['Celebrate']
   },
   {
     title: 'Global Podcast Series',
     description: 'Conversations with inspiring Muslims across business, technology, and beyond.',
     image: sketchImage,
     href: '/work/podcast',
-    tags: ['Storytelling', 'Media', 'Inspiration']
+    tags: ['Learn']
   },
   {
     title: 'Research Initiative',
     description: 'Accessible research papers shining light on Muslim communities worldwide.',
     image: patternImage,
     href: '/work/research',
-    tags: ['Research', 'Knowledge', 'Impact']
+    tags: ['Think']
   },
 ]
 
@@ -58,8 +60,8 @@ const Index = () => {
         title="From Recognition to Community"
         mediaSlot={
           <MediaReveal 
-            src={sketchImage}
-            alt="Sketch of Muslim innovation and leadership"
+            src={moroccanPattern}
+            alt="Islamic calligraphy pattern inspired by Moroccan and Uzbekistan art"
             aspectRatio="landscape"
           />
         }
@@ -74,29 +76,6 @@ const Index = () => {
         </p>
       </StickyChapter>
 
-      {/* Chapter 2: Our Process */}
-      <StickyChapter
-        kicker="Our Approach"
-        title="Bridging Tradition and Innovation"
-        reverse
-        mediaSlot={
-          <MediaReveal 
-            src={patternImage}
-            alt="Islamic geometric patterns representing tradition and modernity"
-            aspectRatio="landscape"
-          />
-        }
-      >
-        <p>
-          From hand-sketched ideas to global impact—our process is disciplined, iterative, and rooted in purpose. 
-          We honor our rich heritage while embracing modern tools and platforms.
-        </p>
-        <p>
-          Every initiative we launch is crafted with care, tested with our community, and designed to create 
-          meaningful connections across generations and disciplines.
-        </p>
-      </StickyChapter>
-
       {/* Stats Section */}
       <StatsRow stats={stats} className="bg-secondary/10" />
 
@@ -107,14 +86,14 @@ const Index = () => {
         role="Community Leader"
       />
 
-      {/* Chapter 3: Our Impact */}
+      {/* Chapter 2: Our Impact */}
       <StickyChapter
         kicker="Our Impact"
         title="Building Community for Generations"
         mediaSlot={
           <MediaReveal 
-            src={communityImage}
-            alt="Muslim community gathering and networking"
+            src={blueMosquePattern}
+            alt="Islamic tile patterns from the Blue Mosque in Turkey"
             aspectRatio="landscape"
           />
         }
@@ -164,12 +143,8 @@ const Index = () => {
         title="Ready to Join the Movement?"
         description="Be part of the platform that's elevating Muslims worldwide and creating lasting change."
         primaryCTA={{
-          text: "Start a Conversation",
+          text: "Get Involved",
           href: "/contact"
-        }}
-        secondaryCTA={{
-          text: "Explore Our Work",
-          href: "/work"
         }}
       />
 

@@ -42,14 +42,26 @@ export function CaseCard({ title, description, image, href, tags, className }: C
             {/* Tags */}
             {tags && tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
-                {tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {tags.map((tag, index) => {
+                  const getTagColor = (tagName: string) => {
+                    switch (tagName) {
+                      case 'Think': return 'bg-blue-500/10 text-blue-400 border-blue-500/20'
+                      case 'Learn': return 'bg-green-500/10 text-green-400 border-green-500/20'
+                      case 'Gather': return 'bg-purple-500/10 text-purple-400 border-purple-500/20'
+                      case 'Celebrate': return 'bg-accent/10 text-accent border-accent/20'
+                      default: return 'bg-accent/10 text-accent border-accent/20'
+                    }
+                  }
+                  
+                  return (
+                    <span
+                      key={index}
+                      className={`px-3 py-1 text-xs font-medium rounded-full border ${getTagColor(tag)}`}
+                    >
+                      {tag}
+                    </span>
+                  )
+                })}
               </div>
             )}
 
