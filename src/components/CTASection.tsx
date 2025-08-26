@@ -53,9 +53,9 @@ export function CTASection({
           variants={slideUpVariants}
           className="flex justify-center items-center"
         >
-          <Link to={primaryCTA.href} className="btn-primary group inline-flex items-center">
+          <Link to={primaryCTA.href} className="btn-primary group inline-flex items-center whitespace-nowrap">
             {primaryCTA.text}
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform flex-shrink-0" />
           </Link>
 
           {secondaryCTA && (

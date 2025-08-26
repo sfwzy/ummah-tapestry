@@ -52,7 +52,7 @@ export function Hero() {
         {/* Subheadline */}
         <motion.p
           variants={slideUpVariants}
-          className="text-large text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
+          className="text-large text-muted-foreground mb-12 max-w-5xl mx-auto leading-relaxed"
         >
           A global platform celebrating Muslim excellence, advancing ideas, and building community for generations to come.
         </motion.p>
@@ -62,9 +62,9 @@ export function Hero() {
           variants={slideUpVariants}
           className="flex justify-center items-center"
         >
-          <Link to="/contact" className="btn-primary group">
+          <Link to="/contact" className="btn-primary group inline-flex items-center whitespace-nowrap">
             Get Involved
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform flex-shrink-0" />
           </Link>
         </motion.div>
 
