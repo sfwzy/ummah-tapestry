@@ -4,24 +4,44 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { slideUpVariants, staggerContainer } from '@/lib/animation'
-import heroImage from '@/assets/hero-bg.jpg'
+import moroccanPattern from '@/assets/patterns/pattern-moroccan-outline.svg'
+import mamlukPattern from '@/assets/patterns/pattern-mamluk-outline.svg'
+import kuficPattern from '@/assets/patterns/pattern-kufic-outline.svg'
+import iznikPattern from '@/assets/patterns/pattern-iznik-outline.svg'
 
 export function Hero() {
+  // Get pattern from URL params for testing, default to moroccan
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedPattern = urlParams.get('bg') || 'moroccan';
+  
+  const patterns = {
+    moroccan: moroccanPattern,
+    mamluk: mamlukPattern,
+    kufic: kuficPattern,
+    iznik: iznikPattern
+  };
+  
+  const currentPattern = patterns[selectedPattern as keyof typeof patterns] || moroccanPattern;
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Parallax */}
+      {/* Subtle Pattern Background */}
       <motion.div 
         className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
-        <img
-          src={heroImage}
-          alt="Islamic geometric pattern background"
-          className="w-full h-full object-cover"
+        <div 
+          className="w-full h-full text-accent"
+          style={{
+            backgroundImage: `url(${currentPattern})`,
+            backgroundSize: '400px 400px',
+            backgroundRepeat: 'repeat',
+            backgroundPosition: 'center'
+          }}
         />
-        <div className="absolute inset-0 bg-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
       </motion.div>
 
       {/* Content */}

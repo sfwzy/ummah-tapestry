@@ -1,0 +1,27 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Moroccan Zellige Lattice Pattern - Subtle Outline -->
+  <defs>
+    <pattern id="moroccanLattice" patternUnits="userSpaceOnUse" width="80" height="80">
+      <!-- Central star -->
+      <path d="M40 10 L50 30 L70 30 L55 45 L60 65 L40 50 L20 65 L25 45 L10 30 L30 30 Z" 
+            stroke="currentColor" 
+            stroke-width="0.5" 
+            fill="none" 
+            opacity="0.1"/>
+      
+      <!-- Connecting geometric lines -->
+      <path d="M0 40 L20 20 M80 40 L60 20 M40 0 L40 20 M40 80 L40 60" 
+            stroke="currentColor" 
+            stroke-width="0.3" 
+            opacity="0.08"/>
+      
+      <!-- Corner ornaments -->
+      <circle cx="0" cy="0" r="3" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.06"/>
+      <circle cx="80" cy="0" r="3" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.06"/>
+      <circle cx="0" cy="80" r="3" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.06"/>
+      <circle cx="80" cy="80" r="3" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.06"/>
+    </pattern>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#moroccanLattice)"/>
+</svg>

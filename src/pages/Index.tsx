@@ -9,9 +9,9 @@ import { CTASection } from '@/components/CTASection'
 import { Footer } from '@/components/Footer'
 
 // Import assets
-import sketchImage from '@/assets/sketch-innovation.jpg'
-import patternImage from '@/assets/pattern-tiles.jpg'
-import communityImage from '@/assets/community-gathering.jpg'
+import innovationImage from '@/assets/innovation-workspace.jpg'
+import geometricImage from '@/assets/geometric-tiles.jpg'
+import learningImage from '@/assets/community-learning.jpg'
 import moroccanPattern from '@/assets/moroccan-pattern.jpg'
 import blueMosquePattern from '@/assets/blue-mosque-pattern.jpg'
 
@@ -26,21 +26,21 @@ const caseStudies = [
   {
     title: 'Ummah100 Launch',
     description: 'Celebrating the top 100 Muslims shaping culture, business, and society today.',
-    image: communityImage,
+    image: learningImage,
     href: '/work/ummah100',
     tags: ['Celebrate']
   },
   {
     title: 'Global Podcast Series',
     description: 'Conversations with inspiring Muslims across business, technology, and beyond.',
-    image: sketchImage,
+    image: innovationImage,
     href: '/work/podcast',
     tags: ['Learn']
   },
   {
     title: 'Research Initiative',
     description: 'Accessible research papers shining light on Muslim communities worldwide.',
-    image: patternImage,
+    image: geometricImage,
     href: '/work/research',
     tags: ['Think']
   },
