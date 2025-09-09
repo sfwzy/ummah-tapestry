@@ -11,10 +11,10 @@ interface NavProps {
 }
 
 const navLinks = [
-  { href: '/', label: 'Think' },
-  { href: '/work', label: 'Learn' },
-  { href: '/about', label: 'Gather' },
-  { href: '/contact', label: 'Celebrate' },
+  { href: '/think', label: 'Think' },
+  { href: '/learn', label: 'Learn' },
+  { href: '/gather', label: 'Gather' },
+  { href: '/celebrate', label: 'Celebrate' },
 ]
 
 export function Nav({ className }: NavProps) {

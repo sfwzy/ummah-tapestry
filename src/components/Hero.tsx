@@ -4,24 +4,9 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { slideUpVariants, staggerContainer } from '@/lib/animation'
-import moroccanPattern from '@/assets/patterns/pattern-moroccan-outline.svg'
-import mamlukPattern from '@/assets/patterns/pattern-mamluk-outline.svg'
-import kuficPattern from '@/assets/patterns/pattern-kufic-outline.svg'
-import iznikPattern from '@/assets/patterns/pattern-iznik-outline.svg'
+import heroPatternSubtle from '@/assets/hero-pattern-subtle.jpg'
 
 export function Hero() {
-  // Get pattern from URL params for testing, default to moroccan
-  const urlParams = new URLSearchParams(window.location.search);
-  const selectedPattern = urlParams.get('bg') || 'moroccan';
-  
-  const patterns = {
-    moroccan: moroccanPattern,
-    mamluk: mamlukPattern,
-    kufic: kuficPattern,
-    iznik: iznikPattern
-  };
-  
-  const currentPattern = patterns[selectedPattern as keyof typeof patterns] || moroccanPattern;
   
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -33,15 +18,16 @@ export function Hero() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div 
-          className="w-full h-full text-accent"
+          className="w-full h-full"
           style={{
-            backgroundImage: `url(${currentPattern})`,
-            backgroundSize: '400px 400px',
-            backgroundRepeat: 'repeat',
-            backgroundPosition: 'center'
+            backgroundImage: `url(${heroPatternSubtle})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            opacity: 0.15
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
       </motion.div>
 
       {/* Content */}
