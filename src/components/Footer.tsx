@@ -7,14 +7,14 @@ const footerLinks = [
   {
     title: 'Platform',
     links: [
-      { label: 'Podcast', href: '/podcast' },
-      { label: 'Research', href: '/research' },
-      { label: 'Events', href: '/events' },
-      { label: 'Ummah100', href: '/ummah100' },
+      { label: 'Think', href: '/think' },
+      { label: 'Learn', href: '/learn' },
+      { label: 'Gather', href: '/gather' },
+      { label: 'Celebrate', href: '/celebrate' },
     ]
   },
   {
-    title: 'Company',
+    title: '622 Collective',
     links: [
       { label: 'About', href: '/about' },
       { label: 'Contact', href: '/contact' },
@@ -50,8 +50,8 @@ export function Footer() {
             <Link to="/" className="text-xl font-grotesk font-bold text-foreground hover:text-accent transition-colors">
               622 Collective
             </Link>
-            <p className="text-muted-foreground mt-4 text-body">
-              Celebrating Muslim excellence, advancing ideas, and building community for generations to come.
+            <p className="text-muted-foreground mt-4 text-base">
+              Celebrating Muslim excellence, advancing ideas, and building community.
             </p>
             
             {/* Social Links */}

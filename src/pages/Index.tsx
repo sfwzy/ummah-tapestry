@@ -76,37 +76,12 @@ const Index = () => {
         </p>
       </StickyChapter>
 
-      {/* Stats Section */}
-      <StatsRow stats={stats} className="bg-secondary/10" />
-
       {/* Testimonial Marquee */}
       <MarqueeQuote
         quote="They listen with care—and deliver with precision. 622 Collective is building something truly special."
         author="Dr. Amina Hassan"
         role="Community Leader"
       />
-
-      {/* Chapter 2: Our Impact */}
-      <StickyChapter
-        kicker="Our Impact"
-        title="Building Community for Generations"
-        mediaSlot={
-          <MediaReveal 
-            src={blueMosquePattern}
-            alt="Islamic tile patterns from the Blue Mosque in Turkey"
-            aspectRatio="landscape"
-          />
-        }
-      >
-        <p>
-          Through podcasts, research, events, and recognition programs, we're creating a global platform 
-          that celebrates Muslim excellence across every discipline and stage of life.
-        </p>
-        <p>
-          Our work strengthens bonds, creates mentorship opportunities, and cultivates a sense of shared 
-          purpose that drives collective progress for our communities worldwide.
-        </p>
-      </StickyChapter>
 
       {/* Case Studies Grid */}
       <section className="chapter-spacing">

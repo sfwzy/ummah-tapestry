@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { slideUpVariants, staggerContainer } from '@/lib/animation'
-import heroPatternSubtle from '@/assets/hero-pattern-subtle.jpg'
+import heroPatternProminent from '@/assets/hero-pattern-prominent.jpg'
 
 export function Hero() {
   
@@ -20,11 +20,11 @@ export function Hero() {
         <div 
           className="w-full h-full"
           style={{
-            backgroundImage: `url(${heroPatternSubtle})`,
+            backgroundImage: `url(${heroPatternProminent})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            opacity: 0.15
+            opacity: 0.25
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
@@ -48,7 +48,7 @@ export function Hero() {
         {/* Main Headline */}
         <motion.h1
           variants={slideUpVariants}
-          className="text-display font-grotesk text-foreground mb-8 leading-none"
+          className="text-5xl font-grotesk text-foreground mb-8 leading-tight max-w-4xl mx-auto"
         >
           Celebrating Muslim Excellence.
           <br />
@@ -58,9 +58,9 @@ export function Hero() {
         {/* Subheadline */}
         <motion.p
           variants={slideUpVariants}
-          className="text-large text-muted-foreground mb-12 max-w-5xl mx-auto leading-relaxed"
+          className="text-lg text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
         >
-          A global platform celebrating Muslim excellence, advancing ideas, and building community for generations to come.
+          A global platform celebrating Muslim excellence, advancing ideas, and building community.
         </motion.p>
 
         {/* CTA */}
